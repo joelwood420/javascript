@@ -118,8 +118,7 @@ while (totalSteps < goal && dayIndex < dailySteps.length) {
     if (totalSteps >= goal) {
         console.log(`Goal reached on day ${dayIndex} with ${totalSteps} steps`);
         break;
-    } if (totalSteps < goal) {
-    console.log(`Goal not reached. Total steps: ${totalSteps}`);
+    } 
 }
   if (totalSteps < goal) {
     console.log(`Goal not reached. Total steps: ${totalSteps}`);
