@@ -84,7 +84,7 @@ const movieReview = [
     {reviewer: "Lisa", movie: "Robot Revolution", rating: 2.1}
 ];
 
-const formattedReviews = movieReview.map(function(review) {
+const Reviews = movieReview.map(function(review) {
     let recommendation = '';
     if (review.rating >= 4.0) {
         recommendation = '❤️❤️❤️❤️❤️ MUSTWATCH!';
@@ -97,6 +97,30 @@ const formattedReviews = movieReview.map(function(review) {
     return `${review.reviewer} says ${review.movie} ${recommendation}`;
 });
 
-formattedReviews.forEach(function(review) {
+Reviews.forEach(function(review) {
     console.log(review);
 });
+
+
+// Exercise 5
+
+const dailySteps = [ 2500, 3200, 1800, 4100, 2900, 3500, 1200, 2800]
+
+let totalSteps = 0;
+let dayIndex = 0;
+const goal = 10000;
+
+while (totalSteps < goal && dayIndex < dailySteps.length) {
+    totalSteps += dailySteps[dayIndex];
+    dayIndex++;
+    console.log(`Day ${dayIndex}: ${dailySteps[dayIndex - 1]} steps, Total: ${totalSteps} steps`);
+    
+    if (totalSteps >= goal) {
+        console.log(`Goal reached on day ${dayIndex} with ${totalSteps} steps`);
+        break;
+    } if (totalSteps < goal) {
+    console.log(`Goal not reached. Total steps: ${totalSteps}`);
+}
+  if (totalSteps < goal) {
+    console.log(`Goal not reached. Total steps: ${totalSteps}`);
+}
