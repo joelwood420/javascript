@@ -71,3 +71,32 @@ const boostedGamers = gamers.map(function(gamer) {
 boostedGamers.forEach(function(gamer) {
   console.log(`${gamer.username}: ${gamer.finalAttack} attack ${gamer.emoji}`);
 });
+
+
+// Exercise 4
+
+
+const movieReview = [
+    {reviewer: "sarah", movie: "Space Warriors", rating: 4.5},
+    {reviewer: "Mike", movie: "The Lost City", rating: 2.8},
+    {reviewer: "Emma", movie: "Laugh Factory", rating: 3.7},
+    {reviewer: "David", movie: "Mystery Island", rating: 4.9},
+    {reviewer: "Lisa", movie: "Robot Revolution", rating: 2.1}
+];
+
+const formattedReviews = movieReview.map(function(review) {
+    let recommendation = '';
+    if (review.rating >= 4.0) {
+        recommendation = '❤️❤️❤️❤️❤️ MUSTWATCH!';
+    } else if (review.rating >= 3.0) {
+        recommendation = '❤️❤️❤️ GOOD';
+    } else {
+        recommendation = '❤️ SKIP';
+    }
+    
+    return `${review.reviewer} says ${review.movie} ${recommendation}`;
+});
+
+formattedReviews.forEach(function(review) {
+    console.log(review);
+});
