@@ -1,7 +1,8 @@
  function lastBigNumber(arr) { // Declare function lastBigNumber with parameter arr
     let lastBiggerThan10 = 0;  // Declare a varible called lastBiggerThan10 and assign it a vale of 0
-    for (let i = arr.length - 1; i >= 0; i--) { // Loop through the array from the end to the beginning
-        if (arr[i] > 10) { // Check if the current element is greater than 10
+    for (let i = arr.length - 1; i >= 0; i--) { // This for loop starts with 'i' set to the last index of the 'arr' array (arr.length - 1).
+// It decrements 'i' by 1 on each iteration, moving backwards through the array.
+// The loop continues as long as 'i' is greater than or equal to 0, ensuring every element is visited in reverse order.        if (arr[i] > 10) { // Check if the current element is greater than 10
             lastBiggerThan10 = arr[i]; // If it is, assign its value to lastBiggerThan10
             break; // Break the for loop once once the condition is met
         }
